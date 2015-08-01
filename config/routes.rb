@@ -1,4 +1,27 @@
 Rails.application.routes.draw do
+
+
+  # Default
+  get("/", { :controller => "directors", :action => "index" })
+
+  # Read
+  get("/directors", { :controller => "directors", :action => "index" })
+  get("/directors/:id", { :controller => "directors", :action => "show" })
+
+  # Delete
+  get("/delete_photo/:id", { :controller => "directors", :action => "destroy" })
+
+
+
+
+
+
+
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
