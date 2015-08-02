@@ -7,16 +7,27 @@ Rails.application.routes.draw do
   get("/directors/new_form", { :controller => "directors", :action => "new_form" })
   get("/directors/create_row", { :controller => "directors", :action => "create_row" })
 
+  get("/actors/new_form", { :controller => "actors", :action => "new_form" })
+  get("/actors/create_row", { :controller => "actors", :action => "create_row" })
+
   # Read
   get("/directors", { :controller => "directors", :action => "index" })
   get("/directors/:id", { :controller => "directors", :action => "show" })
+
+  get("/actors", { :controller => "actors", :action => "index" })
+  get("/actors/:id", { :controller => "actors", :action => "show" })
 
   # Update
   get("/directors/:id/edit_form", { :controller => "directors", :action => "edit_form" })
   get("/update_director/:id", { :controller => "directors", :action => "update_row" })
 
+  get("/actors/:id/edit_form", { :controller => "actors", :action => "edit_form" })
+  get("/update_actor/:id", { :controller => "actors", :action => "update_row" })
+
   # Delete
   get("/delete_director/:id", { :controller => "directors", :action => "destroy" })
+
+  get("/delete_actor/:id", { :controller => "actors", :action => "destroy" })
 
 end
 

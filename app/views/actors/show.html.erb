@@ -1,0 +1,13 @@
+<h1>Top Actors</h1>
+
+<h2><%= @actors.name %></h2>
+
+<p><%= @actors.bio %></p>
+
+<p>Date of Birth: <%= @actors.dob %></p>
+
+<img src="<%= @actors.image_url %>" width="200">
+
+<p><a href="http://localhost:3000/actors/">Back</a></p>
+<p><a href="http://localhost:3000/delete_actor/<%= @actors.id %>">Delete</a></p>
+
