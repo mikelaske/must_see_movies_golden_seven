@@ -1,16 +1,24 @@
 Rails.application.routes.draw do
 
-
   # Default
   get("/", { :controller => "directors", :action => "index" })
+
+  # Create
+  get("/directors/new_form", { :controller => "directors", :action => "new_form" })
+  get("/directors/create_row", { :controller => "directors", :action => "create_row" })
 
   # Read
   get("/directors", { :controller => "directors", :action => "index" })
   get("/directors/:id", { :controller => "directors", :action => "show" })
 
-  # Delete
-  get("/delete_photo/:id", { :controller => "directors", :action => "destroy" })
+  # Update
+  get("/directors/:id/edit_form", { :controller => "directors", :action => "edit_form" })
+  get("/update_director/:id", { :controller => "directors", :action => "update_row" })
 
+  # Delete
+  get("/delete_director/:id", { :controller => "directors", :action => "destroy" })
+
+end
 
 
 
@@ -76,4 +84,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+
