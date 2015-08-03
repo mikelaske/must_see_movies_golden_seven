@@ -1,0 +1,22 @@
+<h1>Edit Movie: <%= @movies.title %></h1>
+
+<form action="http://localhost:3000/update_movie/<%= @movies.id %>">
+  Title:
+  <input name="title" type="string" value="<%= @movies.title %>">
+
+  Year:
+  <input name="year" type="integer" value="<%= @movies.year %>">
+
+  Duration:
+  <input name="duration" type="integer" value="<%= @movies.duration %>">
+
+  Description:
+  <input name="description" type="text" value="<%= @movies.description %>">
+
+  Source:
+  <input name="image_url" type="string" value="<%= @movies.image_url %>">
+
+  <button>Update Movie</button>
+</form>
+
+<p><a href="/movies/<%= @movies.id %>">Go Back</a>

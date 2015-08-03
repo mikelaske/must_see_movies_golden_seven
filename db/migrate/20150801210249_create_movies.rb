@@ -4,7 +4,7 @@ class CreateMovies < ActiveRecord::Migration
       t.string :title
       t.integer :year
       t.integer :duration
-      t.text :desceiption
+      t.text :description
       t.string :image_url
 
       t.timestamps null: false
