@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 20150801210249) do
     t.string   "title"
     t.integer  "year"
     t.integer  "duration"
-    t.text     "desceiption"
+    t.text     "description"
     t.string   "image_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
